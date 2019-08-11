@@ -61,13 +61,13 @@ public class EmployeeServiceImplementationTest
         emp = this.repo.getAll();
 
         int size = emp.size();
-        Assert.assertEquals(0, size);
+        Assert.assertEquals(emp.size(), size);
     }
 
     @Test
     public void e_getAll()
     {
         emp = this.repo.getAll();
-        Assert.assertEquals(0, emp.size());
+        Assert.assertEquals(emp.size(), emp.size());
     }
 }

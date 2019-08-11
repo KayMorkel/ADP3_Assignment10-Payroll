@@ -63,6 +63,7 @@ public class EmployeeRaceRepositoryImplementation implements EmployeeRaceReposit
                 empRace.remove(empl);
                 employee1 = EmployeeRaceFactory.getEmployeeRace(employeeRace.getEmpNum(), employeeRace.getRaceId());
                 this.empRace.add(employee1);
+                break;
             }}
         return employee1;
     }

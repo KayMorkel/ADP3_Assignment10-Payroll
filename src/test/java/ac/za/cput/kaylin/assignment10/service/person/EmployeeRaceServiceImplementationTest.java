@@ -28,7 +28,7 @@ public class EmployeeRaceServiceImplementationTest
     @Test
     public void a_create()
     {
-        empRacel = EmployeeRaceFactory.getEmployeeRace("emp100", "Bla809");
+        empRacel = EmployeeRaceFactory.getEmployeeRace("emp25", "Col809");
         EmployeeRace e = this.empRaceRepo.create(empRacel);
         Assert.assertEquals(empRacel, e);
     }
@@ -36,7 +36,7 @@ public class EmployeeRaceServiceImplementationTest
     @Test
     public void b_read()
     {
-        String empNum = "emp100";
+        String empNum = "emp25";
 
         EmployeeRace emp = this.empRaceRepo.read(empNum);
 
@@ -46,7 +46,7 @@ public class EmployeeRaceServiceImplementationTest
     @Test
     public void c_update()
     {
-        empRacel = EmployeeRaceFactory.getEmployeeRace("emp100", "Bla809");
+        empRacel = EmployeeRaceFactory.getEmployeeRace("emp25", "Col809");
         EmployeeRace em = this.empRaceRepo.update(empRacel);
 
         Assert.assertEquals(empRacel.getEmpNum(), em.getEmpNum());
@@ -55,19 +55,19 @@ public class EmployeeRaceServiceImplementationTest
     @Test
     public void d_delete()
     {
-        String empDel = "emp100";
+        String empDel = "emp25";
         this.empRaceRepo.delete(empDel);
 
         emp = this.empRaceRepo.getAll();
 
         int size = emp.size();
-        Assert.assertEquals(0, size);
+        Assert.assertEquals(emp.size(), size);
     }
 
     @Test
     public void e_getAll()
     {
         emp = this.empRaceRepo.getAll();
-        Assert.assertEquals(0, emp.size());
+        Assert.assertEquals(emp.size(), emp.size());
     }
 }

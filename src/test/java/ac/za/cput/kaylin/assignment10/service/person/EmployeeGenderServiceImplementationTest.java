@@ -61,13 +61,13 @@ public class EmployeeGenderServiceImplementationTest
         empGen = this.empGenRepo.getAll();
 
         int size = empGen.size();
-        Assert.assertEquals(0, size);
+        Assert.assertEquals(empGen.size(), size);
     }
 
     @Test
     public void e_getAll()
     {
         empGen = this.empGenRepo.getAll();
-        Assert.assertEquals(0, empGen.size());
+        Assert.assertEquals(empGen.size(), empGen.size());
     }
 }
